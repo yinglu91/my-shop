@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config(); // default .env
 
 module.exports = {
   siteMetadata: {
@@ -14,9 +14,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-snipcart',
       options: {
-        apiKey: 'OWE3MmZmMjQtNTk3Yi00OThhLWEwMmUtZDY4ZWM4NzIwYzZiNjM2NjM0Mzc1NzE0MTUwNzI1',
-        autopop: true
-      }
+        apiKey: process.env.SNIPCART_API_KEY,
+        autopop: true,
+      },
     },
   ],
-}
+};
